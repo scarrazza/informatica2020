@@ -70,8 +70,8 @@ mancanza di software opportuno per tali operazioni.
 
 - Per accedere da remoto ad un computer raggiungibile sulla rete usiamo il comando:
 
-  ```bash
-  ~$ ssh <username>@<indirizzo_computer>
+  ```
+  ssh <username>@<indirizzo_computer>
   ```
 
   dove per `<indirizzo_computer>` intendiamo l'IP oppure il suo dominio da rete.
@@ -85,7 +85,7 @@ mancanza di software opportuno per tali operazioni.
 
 ## Esercizio 3 - Ambiente di sviluppo
 
-Preparazione ambiente di sviluppo:
+Preparare l'ambiente di sviluppo installando l'editor `vscode`:
 
 - [https://code.visualstudio.com/](https://code.visualstudio.com/)
 - [https://code.visualstudio.com/docs/setup/windows](https://code.visualstudio.com/docs/setup/windows)
@@ -101,8 +101,8 @@ linguaggio per comandi chiamato `bash`.
   input direttamente su schermo.
 - Scrivete
 
-    ```bash
-    ~$ echo "Hello World!"
+    ```
+    echo "Hello World!"
     ```
 
     seguito dal tasto `Invio/Enter`.
@@ -112,20 +112,20 @@ linguaggio per comandi chiamato `bash`.
 
 - Per conoscere i comandi più comuni in bash potete inviare il comando:
 
-  ```bash
-  ~$ help
+  ```
+  help
   ```
 
 - Per conoscere dettagli dei comandi potete usare il comando `man` che apre
   la pagina del manuale bash con i dettagli del comando, e.g.:
 
   ```bash
-  ~$ man echo
+  man echo
   ```
 
   per chiudere la pagina del manuale premere semplicemente il tasto `q` sulla tastiera.
 
-- Potete usare le freccie su e giù per recuperare i commandi che avete già utilizzati.
+- Potete usare le frecce su e giù per recuperare i comandi che avete già utilizzati.
 
 - Per ulteriori informazioni ed esempi potete visitare: [questo link](https://it.wikipedia.org/wiki/Bash)
 
@@ -135,31 +135,32 @@ linguaggio per comandi chiamato `bash`.
 
 I dati contenuti nel disco fisso del sistema sono strutturati in cartelle
 (*directories*). In generale, nei sistemi UNIX la directory di base, chiamata
-**root** (da non confondere con il nome dell'account che a privilegi amministrativi),
-viene indicata con il simbolo `/`. Dentro questa cartella troviamo sottocartelle che
-contengono programmi, dati e configurazioni di sistema che permettono al computer di
- funzionare, e.g. `/usr/`, `/bin/`, `/home/`, ecc.
+**root** (da non confondere con il nome dell'account che a privilegi
+amministrativi), viene indicata con il simbolo `/`. Dentro questa cartella
+troviamo sottocartelle che contengono programmi, dati e configurazioni di
+sistema che permettono al computer di funzionare, e.g. `/usr/`, `/bin/`,
+`/home/`, ecc.
 
- Tutti gli utenti hanno previlegi di scrittura e lettura per i files che si trovano
- dentro la propria directory **home**. Per esempio, l'utente chiamato `john` ha come
- cartella home: `/home/john`.
+ Tutti gli utenti hanno privilegi di scrittura e lettura per i files che si
+ trovano dentro la propria directory **home**. Per esempio, l'utente chiamato
+ `john` ha come cartella home: `/home/john`.
 
-Proponiamo adesso una lista di comandi/esercizi utili per navigare e creare files.
-Per tutti i comandi resta sempre valido l'utilizzo del comando `man` oppure
-l'opzione `<comando> --help`.
+Proponiamo adesso una lista di comandi/esercizi utili per navigare e creare
+files. Per tutti i comandi resta sempre valido l'utilizzo del comando `man`
+oppure l'opzione `<comando> --help`.
 
 1. Per visualizzare il nome della directory in cui ci troviamo, usiamo il comando:
 
-      ```bash
-      ~$ pwd
+      ```
+      pwd
       ```
 
       (print working directory)
 
 2. Per elencare tutti i files e cartelle presenti nella directory in cui ci troviamo:
 
-      ```bash
-      ~$ ls
+      ```
+      ls
       ```
 
       (list). Se invece usiamo il comando `ls -l` (cioè `ls` con l'opzione `-l`)
@@ -168,8 +169,8 @@ l'opzione `<comando> --help`.
 
 3. Per creare una nuova cartella:
 
-      ```bash
-      ~$ mkdir <nome_nuova_cartella>
+      ```
+      mkdir <nome_nuova_cartella>
       ```
 
       (make directory). Se aggiungiamo l'opzione `mkdir -p` tutte le parent directories
@@ -177,32 +178,32 @@ l'opzione `<comando> --help`.
 
 4. Per creare un file vuoto:
 
-      ```bash
-      ~$ touch <nome_file>
+      ```
+      touch <nome_file>
       ```
 
 5. Per cancellare un file o cartella:
 
-      ```bash
-      ~$ rm <file>
-      # oppure per cartelle:
-      ~$ rm -r <directory>
+      ```
+      rm <file>
+      # oppure per cartelle (opzione -r recursive rm):
+      rm -r <directory>
       ```
 
-      dove comando remove è stato chiamato con l'opzione `-r` (recursive).
-      Fare attenzione all'utilizzo di `*`, i.e. `rm -rf *` significa cancellare tutti
+      dove comando remove è stato chiamato con l'opzione `-r` (recursive). Fare
+      attenzione all'utilizzo di `*`, i.e. `rm -rf *` significa cancellare tutti
       i files e cartelle presenti nella directory attuale.
 
 6. Per navigare tra cartelle:
 
-      ```bash
-      ~$ cd <cartella>
+      ```
+      cd <cartella>
       ```
 
       (change directory) oppure se vogliamo entrare nella cartella precedente:
 
-      ```bash
-      ~$ cd ..
+      ```
+      cd ..
       ```
 
       se usate `cd` questo vi portera alla vostra home. Invece `cd -` vi porterà
@@ -210,17 +211,17 @@ l'opzione `<comando> --help`.
 
 7. Per vedere il contenuto di in file senza aprirlo:
 
-      ```bash
-      ~$ less <file>
-      ~$ more <file>
-      ~$ cat <file>
+      ```
+      less <file>
+      more <file>
+      cat <file>
       ```
 
       il comando `cat` viene inoltre impiegato per concatenare files, e.g. `cat file1 file2 > file3`.
 
 Come esercizio creare la struttura cartelle seguente:
 
-```bash
+```
   /home/<username>/corso_di_informatica
     |- Lezione1
           |- data.txt # lasciarlo vuoto
@@ -232,14 +233,14 @@ Per copiare e spostare files utilizziamo i seguenti comandi:
 
 - Per copiare:
 
-   ```bash
+   ```
    ~$ cp <file_da_copiare> <directory_in_cui_copiare>
    ```
 
   (copy). Se vogliamo copiare una cartella basta aggiungere l'opzione recursive, i.e. `cp -r`.
 - Se vogliamo muovere un file oppure rinominare un file, usiamo:
 
-   ```bash
+   ```
    ~$ mv <file> <nuovo_nome_file>
    ```
 
@@ -268,7 +269,7 @@ Come esercizio proviamo a creare un file usando code:
 
 1. aprire il terminale, scegliere una cartella dentro la propria home e eseguire:
 
-      ```bash
+      ```
       ~$ code file1.txt
       ```
 
@@ -282,7 +283,7 @@ A questo punto proviamo a creare un file per codice in C++:
 
 1. aprire il terminale e eseguire
 
-      ```bash
+      ```
       ~$ code file.cc
       ```
 
@@ -315,22 +316,22 @@ Spiegare l'utilizzo di `git` è al di fuori dello scopo di questo tutorial, ma s
 
 A titolo di esempio potete scaricare questa guida e tutto il materiale del corso semplicemente facendo:
 
-```bash
-~$ git clone https://github.com/scarrazza/informatica2020.git
+```
+git clone https://github.com/scarrazza/informatica2020.git
 ```
 
 e poi entrare nella cartella `informatica2020` con
 
-```bash
-~$ cd informatica2020
+```
+cd informatica2020
 ```
 
 Ogni settimana le nuove lezioni saranno pubblicate sul repositorio `git`, per ottenere
 gli aggiornamenti basterà effettuare un `pull`, i.e.:
 
-```bash
-~$ cd informatica2020
-~$ git pull
+```
+cd informatica2020
+git pull
 ```
 
 A questo punto provare ad aprire i documenti appena clonati con `gedit`, e nel caso di PDFs con `evince`.
@@ -339,8 +340,8 @@ A questo punto provare ad aprire i documenti appena clonati con `gedit`, e nel c
 
 Per copiare files da remoto utilizziamo il comando `scp`:
 
-  ```bash
-  ~$ scp <username>@<indirizzo_computer>:<file> <file_destinazione>
+  ```
+  scp <username>@<indirizzo_computer>:<file> <file_destinazione>
   ```
 
   Questo comando funziona in modo analogo a `cp`, quindi si possono copiare
