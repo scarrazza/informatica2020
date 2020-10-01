@@ -119,7 +119,7 @@ linguaggio per comandi chiamato `bash`.
 - Per conoscere dettagli dei comandi potete usare il comando `man` che apre
   la pagina del manuale bash con i dettagli del comando, e.g.:
 
-  ```bash
+  ```
   man echo
   ```
 
@@ -234,14 +234,14 @@ Per copiare e spostare files utilizziamo i seguenti comandi:
 - Per copiare:
 
    ```
-   ~$ cp <file_da_copiare> <directory_in_cui_copiare>
+   cp <file_da_copiare> <directory_in_cui_copiare>
    ```
 
   (copy). Se vogliamo copiare una cartella basta aggiungere l'opzione recursive, i.e. `cp -r`.
 - Se vogliamo muovere un file oppure rinominare un file, usiamo:
 
    ```
-   ~$ mv <file> <nuovo_nome_file>
+   mv <file> <nuovo_nome_file>
    ```
 
  Ricordare che le directories possono essere rappresentate da notazione relativa rispetto
@@ -270,7 +270,7 @@ Come esercizio proviamo a creare un file usando code:
 1. aprire il terminale, scegliere una cartella dentro la propria home e eseguire:
 
       ```
-      ~$ code file1.txt
+      code file1.txt
       ```
 
       scrivere un contenuto qualunque, salvare il file e chiudere `code`.
@@ -284,7 +284,7 @@ A questo punto proviamo a creare un file per codice in C++:
 1. aprire il terminale e eseguire
 
       ```
-      ~$ code file.cc
+      code file.cc
       ```
 
 2. scrivere la seguente riga
