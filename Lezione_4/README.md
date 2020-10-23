@@ -76,7 +76,7 @@ una taglia di bicicletta (XS,S,M,L,XL) seguendo i criteri:
   - altezza tra 1.10m e 1.30m (compreso) e peso minore di 40kg (compreso): S
   - altezza tra 1.10m e 1.30m (compreso) e peso maggiore di 40kg: M
   - altezza tra 1.30m e 1.60m (compreso): M
-  - altezza maggiore di 1.70m: L
+  - altezza maggiore di 1.60m: L
 - più di 18 anni:
   - altezza minore di 1.40m (compreso) oppure peso minore di 40kg (compreso): XS
   - altezza tra 1.40m e 1.60m (compreso): S
