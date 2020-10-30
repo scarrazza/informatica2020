@@ -63,7 +63,10 @@ introdotti dall'utente utilizzando un ciclo `for` oppure `while`.
 1. Scaricare il file con dati copiando e incollando il commando seguente su terminale:
 ```bash
 wget https://raw.githubusercontent.com/scarrazza/informatica2020/master/Lezione_5/data.dat
+# oppure se siete su macOS
+curl https://raw.githubusercontent.com/scarrazza/informatica2020/master/Lezione_5/data.dat -o data.dat
 ```
+
 I dati contengono 1000 numeri corrispondenti a misure fatte in laboratorio della costante di accelerazione di gravità `g`.
 
 2. Leggere tutti i numeri da file usando un ciclo `for` infinito, controllato dalla condizione `eof`.
